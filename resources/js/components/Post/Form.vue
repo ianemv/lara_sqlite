@@ -12,7 +12,7 @@
             <label for="title">Publish Date</label>
             <input type="date" class="form-control" aria-describedby="" placeholder="Published Date" v-model="form.publish_date">
         </div>
-        <button @click="submitPost" class="btn btn-primary">Submit</button>
+        <button @click="submitPost" class="btn btn-primary">Post</button>
     </div>
 </template>
 
