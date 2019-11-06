@@ -11,4 +11,5 @@ Steps:
 3) create database.sqlite at directory database
 4) composer install from your bash command
 5) npm run prod
+7) php artisan migrate
 6) php artisan run serve
