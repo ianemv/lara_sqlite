@@ -53,8 +53,15 @@
                         group: 'notify',
                         title: 'New Post',
                         text: 'New post added!'
-                        });
+                    });
                     this.clearForm();
+                }else{
+                    this.$notify({
+                        group: 'notify',
+                        title: 'Error',
+                        type:'warn',
+                        text: 'Error adding post'
+                    });
                 }
             },
             clearForm(){

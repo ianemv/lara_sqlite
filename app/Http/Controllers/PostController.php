@@ -34,21 +34,22 @@ class PostController extends Controller
             $input = $request->all();
 
             $input['publish_date'] = empty($input['publish_date']) ? date('Y-m-d h:m:s',strtotime("now")) : date('Y-m-d h:m:s',strtotime($input['publish_date']));
-            $input['slug'] =  Str::slug($input['title'], '-');
+
+            $post = new Post;
 
             if (!empty($input['id'])){
                 $post = Post::find($input['id']);
                 $resp = $post;
             }else{
+                $input['slug'] = $post->createSlug ($input['title'], 0);
                 Post::create($input);
                 $resp = $input;
-
             }
-
 
             return response()->json([
                 'message' => $resp
             ], 200);
+
 
         } catch (\Exception $e){
             return response()->json([
