@@ -8,6 +8,7 @@ Steps:
     DB_DATABASE=laravel
     DB_USERNAME=root
     DB_PASSWORD=
-3) composer install from your bash command
-4) npm run prod
-3) php artisan run serve
+3) create database.sqlite at directory database
+4) composer install from your bash command
+5) npm run prod
+6) php artisan run serve
