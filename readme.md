@@ -1,7 +1,7 @@
 Steps:
 
 1) copy .env.example to .env
-```
+
 2) update .env file and change db connection to DB_CONNECTION=sqlite
     and remove the following lines since we will be using sqlite
     ````
